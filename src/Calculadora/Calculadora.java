@@ -1,11 +1,13 @@
 package Calculadora;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Calculadora {
 
 	static Scanner escaner = new Scanner(System.in);
 	static Metodo metodo = new Metodo();
+	static DecimalFormat df = new DecimalFormat("#.00");
 	
 	public static void main(String[] args) {
 		
@@ -23,22 +25,22 @@ public class Calculadora {
 			switch (operacion) {
 			case "sumar":
 				double suma = metodo.Sumar(a, b);
-				System.out.println("salida : " + suma);
+				System.out.println("salida : " + df.format(suma));
 				break;
 			
 			case "restar":
 				double resta = metodo.Restar(a, b);
-				System.out.println("salida : " + resta);
+				System.out.println("salida : " + df.format(resta));
 				break;
 				
 			case "multiplicar":
 				double multiplicacion = metodo.Multiplicar(a, b);
-				System.out.println("salida : " + multiplicacion);
+				System.out.println("salida : " + df.format(multiplicacion));
 				break;
 			
 			case "Dividir":
 				double divicion = metodo.Restar(a, b);
-				System.out.println("salida : " + divicion);
+				System.out.println("salida : " + df.format(divicion));
 				break;
 				
 			}
